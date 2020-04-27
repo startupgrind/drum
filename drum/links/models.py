@@ -12,11 +12,11 @@ except ImportError:
     from urlparse import urlparse
 
 from django.conf import settings
-from django.core.urlresolvers import reverse
 from django.db import models
 from django.db.models import Q
 from django.db.models.signals import post_save, pre_delete
 from django.dispatch import receiver
+from django.urls import reverse
 from django.utils.encoding import python_2_unicode_compatible
 
 from mezzanine.accounts import get_profile_model
