@@ -66,7 +66,7 @@ class Link(Displayable, Ownable):
 @python_2_unicode_compatible
 class Profile(models.Model):
 
-    user = models.OneToOneField(USER_MODEL)
+    user = models.OneToOneField(USER_MODEL, on_delete=models.CASCADE)
     website = models.URLField(blank=True)
     bio = models.TextField(blank=True)
     karma = models.IntegerField(default=0, editable=False)
